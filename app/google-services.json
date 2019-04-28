@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "686160219488",
+    "firebase_url": "https://audio-f6e2b.firebaseio.com",
+    "project_id": "audio-f6e2b",
+    "storage_bucket": "audio-f6e2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686160219488:android:15e51396cdcf98bd",
+        "android_client_info": {
+          "package_name": "edmt.dev.androidmp3stream"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686160219488-gkef36bdroukp49gkje7pllqilgo6o9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBuRRLL6i31ItvsEKOJ6JMav58-kdFJUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686160219488-gkef36bdroukp49gkje7pllqilgo6o9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
