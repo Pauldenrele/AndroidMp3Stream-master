@@ -21,10 +21,13 @@ import dyanamitechetan.vusikview.VusikView;
 
 public class MainActivity extends AppCompatActivity implements MediaPlayer.OnBufferingUpdateListener,MediaPlayer.OnCompletionListener{
 
+
+
+    //Init
     private ImageButton btn_play_pause;
     private SeekBar seekBar;
     private TextView textView;
-   private Button nxtBtn;
+    private Button nxtBtn;
     private VusikView musicView;
 
     private MediaPlayer mediaPlayer;
@@ -39,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnBuf
        nxtBtn = findViewById(R.id.nxt_act);
         musicView = (VusikView)findViewById(R.id.musicView);
 
-
+    //The button to move to the next activity
     nxtBtn.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -65,6 +68,8 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnBuf
         textView = (TextView)findViewById(R.id.textTimer);
 
         btn_play_pause = (ImageButton) findViewById(R.id.btn_play_pause);
+
+        //To play and pause the voicenote
         btn_play_pause.setOnClickListener(new View.OnClickListener() {
 
 
@@ -116,6 +121,8 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnBuf
                     }
                 };
 
+
+                //The line of code to execute the voice note stored on firebase storage (url)
                 mp3Play.execute("https://firebasestorage.googleapis.com/v0/b/audio-f6e2b.appspot.com/o/Audio%2Fnew_audio.3gp?alt=media&token=a1cb3fd5-afe0-4660-82f5-1a297551a1f4"); // direct link mp3 file
 
                 musicView.start();
@@ -128,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnBuf
 
 
     }
-
+      //Code on seekbar
     private void updateSeekBar() {
         seekBar.setProgress((int)(((float)mediaPlayer.getCurrentPosition() / mediaFileLength)*100));
         if(mediaPlayer.isPlaying())

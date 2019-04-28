@@ -64,7 +64,7 @@ public class Main2Activity extends AppCompatActivity {
                 Log.d("App", "failed to create directory");
             }
         }
-
+   //Init
         mStart = findViewById(R.id.start_button);
         mStop = findViewById(R.id.stop_button);
         mStart.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +75,8 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+
+        //The button to stop the audio recording
         mStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -153,7 +155,7 @@ public class Main2Activity extends AppCompatActivity {
         mediaRecorder.setOutputFile(AudioSavePathInDevice);
     }
 
-
+//Requesting permission for a new user
     private void requestPermission() {
         ActivityCompat.requestPermissions(Main2Activity.this, new
                 String[]{WRITE_EXTERNAL_STORAGE, RECORD_AUDIO}, RequestPermissionCode);
@@ -190,7 +192,7 @@ public class Main2Activity extends AppCompatActivity {
         return result == PackageManager.PERMISSION_GRANTED &&
                 result1 == PackageManager.PERMISSION_GRANTED;
     }
-
+  //The method to upload the video to the firebase storage
     private void uploadAudio() {
         Toast.makeText(getApplicationContext(), "Uploading", Toast.LENGTH_SHORT).show();
         mDialog.setMessage("uploading audio");
@@ -209,7 +211,7 @@ public class Main2Activity extends AppCompatActivity {
         });
     }
 
-
+//The method to start the audio recording
     private void startAudio() {
         if (checkPermission()) {
             int count = 0;
@@ -236,6 +238,8 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 
+
+    //The method to stop the audio recording an automatically save it to database
     private void stopAudio() {
         if (mediaRecorder != null) {
             mediaRecorder.stop();
